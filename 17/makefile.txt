@@ -1,0 +1,6 @@
+prog.exe: main.o solve.o
+	gcc -g -lm main.o solve.o -o prog.exe
+main.o: main.c solve.h
+	gcc -g -c main.c
+solve.o: solve.c solve.h
+	gcc -g -c solve.c
